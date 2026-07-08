@@ -1,0 +1,9 @@
+/Builds/
+/JuceLibraryCode/
+/.vs/
+/x64/
+/Debug/
+/Release/
+*.user
+*.suo
+*.sln
