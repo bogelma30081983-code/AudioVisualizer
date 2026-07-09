@@ -54,6 +54,15 @@ private:
     juce::dsp::FFT forwardFFT;
     juce::dsp::WindowingFunction<float> window;
 
+
+    // ... твої інші інструменти
+    /*std::array<std::complex<float>, AudioVisualizerAudioProcessor::fftSize> complexLeft{};
+    std::array<std::complex<float>, AudioVisualizerAudioProcessor::fftSize> complexRight{};*/
+
+    // Класичні масиви для надійного FFT
+    std::array<float, AudioVisualizerAudioProcessor::fftSize * 2> fftDataL{};
+    std::array<float, AudioVisualizerAudioProcessor::fftSize * 2> fftDataR{};
+
     // Буфери для накопичення даних спектру
     std::array<float, fftSize> fftBufferL{};
     std::array<float, fftSize> fftBufferR{};
